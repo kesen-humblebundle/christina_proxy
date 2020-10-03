@@ -5,7 +5,8 @@
   "main": "./server/index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "server:dev": "cross-env NODE_ENV=production nodemon index.js",
+    "server:dev": "cross-env NODE_ENV=production nodemon server/index.js",
+    "start": "cross-env NODE_ENV=production node server/index.js",
     "load-test-root": "k6 run -o influxdb=\"http://localhost:8086/Sdc\" server/load-testing/get1000RPS.k6.js"
   },
   "repository": {
