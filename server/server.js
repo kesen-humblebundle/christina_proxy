@@ -22,6 +22,10 @@ app.use(
 app.use("/static", express.static(path.resolve(__dirname, "../assets")));
 app.set("views", path.resolve(__dirname, "../views"));
 
+app.get('/loaderio-c7b0b6e53772ea8b720203d11cec64e1', (req, res) => {
+  res.sendFile(path.resolve(__dirname, '..', 'assets', 'loaderio-c7b0b6e53772ea8b720203d11cec64e1.txt'));
+});
+
 app.get("/:product_id", (req, res) => {
   res.status(200).render("index", {
     descService: `${process.env.DESC_SERVICE}/bundle.js`,
