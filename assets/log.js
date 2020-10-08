@@ -1,23 +1,30 @@
 console.info(`
-************************************************
-*                                              *
-*      This proxy was made by Rane Wallin.     *
-*      It pulls in 8 services into a single    *
-*      view that is a clone of the Humble      *
-*      Bundle store's item page.               *
-*                                              *
-*      Rane also wrote the description         *
-*      service and also the related            *
-*      content section.                        *
-*                                              *
-*      If you would like more information      *
-*      email Rane at rane@blasph.me            *
-*                                              *
-************************************************
+*****************************************************
+*                                                   *
+*      This frontend was originally created by      *
+*      Rane Wallin. You may view the repo at:       *
+*      https://github.com/KichiUeda/Rane-proxy      *
+*      and contact her at rane@blasph.me.           *
+*                                                   *
+*      The backend for this proxy has been          *
+*      redesigned by Christina Wang.                *
+*      It reroutes API calls to the correct         *
+*      service endpoints, and adds multi-cluster    *
+*      support and caching for production scale.    *
+*                                                   *
+*      Similarly, Christina redesigned Rane's       *
+*      description service, including               *
+*      database and server, to handle               *
+*      production load.                             *
+*                                                   *
+*      For inquiries, please email Christina at     *
+*      cywang117@outlook.com.                       *
+*                                                   *
+*****************************************************
 
 
 `);
-console.log = function () {};
+//console.log = function () {};
 console.error = function () {};
 console.warn = function () {};
 console.assert = function () {};

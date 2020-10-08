@@ -5,7 +5,9 @@
   "main": "./server/index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "server:dev": "nodemon index.js"
+    "server:dev": "cross-env NODE_ENV=production nodemon server/index.js",
+    "start": "cross-env NODE_ENV=production node server/index.js",
+    "load-test-root": "k6 run -o influxdb=\"http://localhost:8086/Sdc\" server/load-testing/get1000RPS.k6.js"
   },
   "repository": {
     "type": "git",
@@ -22,13 +24,14 @@
     "dotenv": "^8.2.0",
     "express": "^4.17.1",
     "helmet": "^3.23.3",
-    "morgan": "^1.10.0",
-    "node-fetch": "^2.6.0",
+    "node-fetch": "^2.6.1",
     "nodeenv": "^3.0.1",
     "pug": "^3.0.0",
     "superagent": "^5.3.1"
   },
   "devDependencies": {
+    "cross-env": "^7.0.2",
+    "k6": "0.0.0",
     "less": "^3.11.3",
     "less-watch-compiler": "^1.14.6",
     "nodemon": "^2.0.4"
